@@ -37,7 +37,7 @@ export const ScrollItem = ({
 }: ItemCardProps) => {
   return (
     <div className={cn(
-      "w-[100vw] md:w-[33.333333vw] shrink-0 h-full flex flex-col p-10 md:p-16 border-r border-black/5 last:border-r-0",
+      "w-[calc(100vw+1px)] md:w-[calc(33.333333vw+1px)] -mr-[1px] shrink-0 h-full flex flex-col p-10 md:p-16",
       "justify-center items-start text-left bg-transparent", 
       className
     )}>

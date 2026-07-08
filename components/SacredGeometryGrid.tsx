@@ -221,8 +221,8 @@ export const SacredGeometryGrid: React.FC<SacredGridProps> = ({
         const offsetY = (getDeterministicRandom(i, 0.2) - 0.5) * randomness * 0.5; // Meno caos verticale per non sovrapporli
 
         return {
-          x: Math.max(25, Math.min(75, xBase + offsetX)), // Clampa tra 25% e 75% su mobile per totale sicurezza
-          y: Math.max(5, Math.min(95, yBase + offsetY)),
+          x: Number(Math.max(25, Math.min(75, xBase + offsetX)).toFixed(4)),
+          y: Number(Math.max(5, Math.min(95, yBase + offsetY)).toFixed(4)),
         };
       } else {
         // LAYOUT A POLIGONO (DESKTOP)
@@ -235,8 +235,8 @@ export const SacredGeometryGrid: React.FC<SacredGridProps> = ({
         const offsetY = (getDeterministicRandom(i, 0.4) - 0.5) * randomness;
 
         return {
-          x: 50 + radius * Math.cos(angle) + offsetX,
-          y: 50 + radius * Math.sin(angle) + offsetY,
+          x: Number((50 + radius * Math.cos(angle) + offsetX).toFixed(4)),
+          y: Number((50 + radius * Math.sin(angle) + offsetY).toFixed(4)),
         };
       }
     });

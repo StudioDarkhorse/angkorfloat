@@ -116,7 +116,7 @@ export default function ComingSoon({
             transition={{ duration: 0.8, delay: 0.15 }}
             className="relative z-10 bg-custom-coconut/80 dark:bg-custom-blue/80 backdrop-blur-xl border border-custom-blue/20 dark:border-custom-coconut/20 shadow-2xl rounded-4xl p-8 sm:p-12 transition-all duration-1000 group-hover:bg-custom-coconut/80 dark:group-hover:bg-custom-blue/50"
           >
-            <h1 className="font-kugile text-4xl sm:text-6xl text-custom-rosewood dark:text-custom-almond font-normal italic tracking-wide leading-tight mb-6">
+            <h1 className="font-kugile text-4xl sm:text-6xl text-custom-rosewood dark:text-custom-almond font-normal tracking-wide leading-tight mb-6">
               {title}
             </h1>
 
