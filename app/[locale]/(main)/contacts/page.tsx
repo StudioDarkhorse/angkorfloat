@@ -172,17 +172,17 @@ export default async function ContactsPage({ params }: { params: Promise<{ local
 
         </div>
       </section>
-      <section className="w-full bg-custom-celadon dark:bg-custom-rosewood transition-colors duration-500 py-12 md:py-16 border-y border-custom-blue/5 dark:border-white/5">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-10">
-          <span className="text-2xl sm:text-3xl font-black font-josefin uppercase tracking-[0.15em] sm:tracking-[0.2em] text-custom-blue/50 dark:text-custom-coconut/50 text-center md:text-left leading-tight">
+      <section className="w-full bg-custom-celadon dark:bg-custom-rosewood transition-colors duration-500 py-4 px-8 md:px-24 lg:px-16 border-y border-custom-blue/5 dark:border-white/5">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 lg:gap-10">
+          <span className="text-xl font-black font-josefin uppercase tracking-[0.15em] sm:tracking-[0.2em] text-custom-blue/50 dark:text-custom-coconut/50 text-center md:text-left leading-tight">
             {t('followOurJourney')}
           </span>
-          <div className="flex gap-10 sm:gap-12 md:gap-16">
+          <div className="flex gap-8 lg:pr-6">
             <a href="#" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-110 active:scale-95 group">
-              <FacebookIcon className="w-12 h-12 sm:w-14 sm:h-14  text-custom-blue/50 dark:text-custom-coconut/50 group-hover:text-custom-blue/80 dark:group-hover:text-custom-coconut transition-colors duration-300" />
+              <FacebookIcon className="w-8 h-8  text-custom-blue/50 dark:text-custom-coconut/50 group-hover:text-custom-blue/80 dark:group-hover:text-custom-coconut transition-colors duration-300" />
             </a>
             <a href="#" target="_blank" rel="noopener noreferrer" className="transition-transform hover:scale-110 active:scale-95 group">
-              <InstagramIcon className="w-12 h-12 sm:w-14 sm:h-14  text-custom-blue/50 dark:text-custom-coconut/50 group-hover:text-custom-blue/80 dark:group-hover:text-custom-coconut transition-colors duration-300" />
+              <InstagramIcon className="w-8 h-8  text-custom-blue/50 dark:text-custom-coconut/50 group-hover:text-custom-blue/80 dark:group-hover:text-custom-coconut transition-colors duration-300" />
             </a>
           </div>
         </div>
