@@ -21,9 +21,9 @@ export default async function MainLayout({
         fixed={true}
         threshold={50}
       />
-      <div className="mt-32 md:mt-40 grow bg-custom-celadon dark:bg-custom-green transition-colors duration-500">
+      <main className="mt-32 md:mt-40 grow bg-custom-celadon dark:bg-custom-green transition-colors duration-500">
         {children}
-      </div>
+      </main>
       <Footer />
     </div>
   );

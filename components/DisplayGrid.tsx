@@ -40,7 +40,7 @@ const DisplayGrid: React.FC<ItemsGridProps> = ({
                   alt={item.title}
                   fill
                   className={imgClass}
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  sizes="250px"
                 />
               </div>
 

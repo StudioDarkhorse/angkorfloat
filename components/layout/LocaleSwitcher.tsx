@@ -31,16 +31,16 @@ export default function LocaleSwitcher() {
           <button
             disabled={isPending}
             onClick={() => onSelectChange(loc)}
-            className={`font-josefin text-sm  tracking-widest uppercase transition-opacity text-custom-blue dark:text-custom-almond ${
+            className={`font-josefin text-sm tracking-widest uppercase transition-colors ${
               locale === loc 
-                ? 'opacity-100 font-bold' 
-                : 'opacity-50 hover:opacity-100'
+                ? 'font-bold text-custom-blue dark:text-custom-almond' 
+                : 'text-custom-blue/75 dark:text-custom-almond/80 hover:text-custom-blue dark:hover:text-custom-almond'
             }`}
           >
             {loc}
           </button>
           {idx < availableLocales.length - 1 && (
-            <span className="mx-2 opacity-30 text-sm">|</span>
+            <span className="mx-2 h-3 w-[1px] bg-custom-blue/30 dark:bg-custom-almond/30" aria-hidden="true" />
           )}
         </span>
       ))}

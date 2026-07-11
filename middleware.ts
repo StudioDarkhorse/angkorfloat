@@ -2,9 +2,19 @@ import NextAuth from "next-auth";
 import { authConfig } from "./auth.config";
 import createMiddleware from 'next-intl/middleware';
 import { routing } from './i18n/routing';
-import { NextResponse } from 'next/server';
+import { NextResponse, NextRequest } from 'next/server';
 
 const intlMiddleware = createMiddleware(routing);
+
+const getIntlResponse = (request: NextRequest) => {
+  const res = intlMiddleware(request);
+  const link = res.headers.get('Link');
+  if (link) {
+    res.headers.set('Link', link.replace(/hreflang="kh"/g, 'hreflang="km"'));
+  }
+  return res;
+};
+
 const { auth } = NextAuth(authConfig);
 
 export default auth((req) => {
@@ -12,7 +22,7 @@ export default auth((req) => {
 
   // 1. ANTILOOP PRONTISSIMO: Se siamo già sul 404, non toccare nulla
   if (pathname.includes('/404')) {
-    return intlMiddleware(req);
+    return getIntlResponse(req);
   }
 
   const isLoggedIn = !!req.auth?.user;
@@ -25,7 +35,7 @@ export default auth((req) => {
   // Gestione del Locale
   const segments = pathname.split('/');
   const firstSegment = segments[1];
-  const hasLocale = routing.locales.includes(firstSegment as any);
+  const hasLocale = (routing.locales as readonly string[]).includes(firstSegment);
   const locale = hasLocale ? firstSegment : routing.defaultLocale;
 
   const hasBypass = salt ? req.nextUrl.searchParams.get('bypass') === salt : false;
@@ -70,7 +80,7 @@ export default auth((req) => {
     }
   }
 
-  return intlMiddleware(req);
+  return getIntlResponse(req);
 });
 
 export const config = {

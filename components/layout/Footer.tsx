@@ -33,23 +33,23 @@ const Footer = () => {
 
                     {/* Navigazione Principale */}
                     <nav className="flex flex-col md:items-end space-y-3 text-lg font-light">
-                        <Link href="/why-float" className="hover:text-custom-celadon transition-colors duration-300 font-josefin font-black">
+                        <Link href="/why-float" className="text-custom-almond hover:text-custom-celadon transition-colors duration-300 font-josefin font-black">
                             {t('links.whyFloat')}
                         </Link>
-                        <Link href="/faq" className="hover:text-custom-celadon transition-colors duration-300 font-josefin font-black">
+                        <Link href="/faq" className="text-custom-almond hover:text-custom-celadon transition-colors duration-300 font-josefin font-black">
                             {t('links.faq')}
                         </Link>
-                        <Link href="/packages" className="hover:text-custom-celadon transition-colors duration-300 font-josefin font-black">
+                        <Link href="/packages" className="text-custom-almond hover:text-custom-celadon transition-colors duration-300 font-josefin font-black">
                             {t('links.packages')}
                         </Link>
-                        <Link href="/healing-sessions" className="hover:text-custom-celadon transition-colors duration-300 font-josefin font-black">
+                        <Link href="/healing-sessions" className="text-custom-almond hover:text-custom-celadon transition-colors duration-300 font-josefin font-black">
                             {t('links.healing')}
                         </Link>
 
-                        <Link href="/blog" className="hover:text-custom-celadon transition-colors duration-300 font-josefin font-black">
+                        <Link href="/blog" className="text-custom-almond hover:text-custom-celadon transition-colors duration-300 font-josefin font-black">
                             {t('links.blog')}
                         </Link>
-                        <Link href="/contacts" className="hover:text-custom-celadon transition-colors duration-300 font-josefin font-black mb-0">
+                        <Link href="/contacts" className="text-custom-almond hover:text-custom-celadon transition-colors duration-300 font-josefin font-black mb-0">
                             {t('links.contact')}
                         </Link>
 
@@ -68,8 +68,8 @@ const Footer = () => {
 
                 </div>
             </div>
-                <div className="mt-8 lg:mt-16 flex flex-col items-center space-y-2 text-sm opacity-90 font-light">
-                    <p className="pt-4 text-custom-celadon text-center lg:text-left">
+                <div className="mt-8 lg:mt-16 flex flex-col items-center space-y-2 text-sm font-light">
+                    <p className="pt-4 text-custom-almond text-center lg:text-left">
                         © {currentYear} {t('copyright')}
                     </p>
                 </div>

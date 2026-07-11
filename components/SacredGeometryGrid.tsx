@@ -139,7 +139,13 @@ export const SacredGeometryElement: React.FC<SacredElementProps> = ({
           className={`absolute inset-0 rounded-full overflow-hidden ring-4 transition-all duration-700 shadow-2xl z-10
           ${isHovered ? `grayscale-0 scale-120 ${imageRingClassName}` : 'grayscale opacity-70 scale-100 ring-transparent'}`}
         >
-          <Image src={img} alt={title || "Healer"} fill className="object-cover" />
+          <Image
+            src={img}
+            alt={title || "Healer"}
+            fill
+            className="object-cover"
+            sizes="(max-width: 768px) 120px, 160px"
+          />
         </div>
 
         {/* Tooltip Info */}
@@ -149,9 +155,9 @@ export const SacredGeometryElement: React.FC<SacredElementProps> = ({
           animate={isHovered ? { opacity: 1, y: 0 } : { opacity: 0, y: 10 }}
         >
           {title && (
-            <h4 className={`text-lg md:text-xl font-bold font-kugile uppercase tracking-tighter transition-colors duration-500 ${cardTitleClassName}`}>
+            <h3 className={`text-lg md:text-xl font-bold font-kugile uppercase tracking-tighter transition-colors duration-500 ${cardTitleClassName}`}>
               {title}
-            </h4>
+            </h3>
           )}
           {subtitle && (
             <p className={`text-sm md:text-lg italic font-josefin font-bold opacity-80 leading-tight mt-1 whitespace-pre-line transition-colors duration-500 ${cardSubtitleClassName}`}>
