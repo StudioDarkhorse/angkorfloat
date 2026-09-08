@@ -14,8 +14,6 @@
 
 @font-face { font-family: Kugile; src: url('/fonts/kugile/Kugile_Demo.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
 @font-face { font-family: Mocha; src: url('/fonts/mocha/Mocha-Demo.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: Moglan; src: url('/fonts/moglan/Moglan_DEMO.ttf') format('truetype'); font-weight: 400; font-style: normal; font-display: swap; }
-@font-face { font-family: Primor; src: url('/fonts/primor/PrimorStylish.otf') format('opentype'); font-weight: 400; font-style: normal; font-display: swap; }
 
 :root {
   --background: #ffffff;
@@ -52,8 +50,6 @@
   --font-josefin: Josefin, sans-serif;
   --font-kugile: Kugile, sans-serif;
   --font-mocha: Mocha, sans-serif;
-  --font-moglan: Moglan, sans-serif;
-  --font-primor: Primor, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {

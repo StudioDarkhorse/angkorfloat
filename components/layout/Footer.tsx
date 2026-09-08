@@ -17,7 +17,7 @@ const Footer = () => {
 
                     <div className="space-y-2 w-fit mx-auto lg:mx-0">
                         <div className="flex items-center">
-                            <DynamicLogo size="xl" />
+                            <DynamicLogo size="xl" sublogoLightThemeColor="#D0B48B" />
                         </div>
                     </div>
                     <div>
@@ -68,11 +68,32 @@ const Footer = () => {
 
                 </div>
             </div>
-                <div className="mt-8 lg:mt-16 flex flex-col items-center space-y-2 text-sm font-light">
-                    <p className="pt-4 text-custom-almond text-center lg:text-left">
-                        © {currentYear} {t('copyright')}
-                    </p>
-                </div>
+            <div className="mt-8 lg:mt-16 flex flex-col sm:flex-row items-center justify-between gap-2 lg:gap-4 text-sm font-light border-t border-custom-almond/20 pt-8 lg:pt-4">
+                <a
+                    href="https://github.com/StudioDarkhorse"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group inline-flex items-end gap-1 text-custom-almond hover:text-custom-celadon transition-colors text-sm leading-none"
+                >
+                    <span
+                        className="h-[1.2em] w-[1.2em] bg-custom-almond group-hover:bg-custom-celadon transition-colors inline-block shrink-0"
+                        style={{
+                            maskImage: 'url(/svg/StudioDarkHorse.svg)',
+                            WebkitMaskImage: 'url(/svg/StudioDarkHorse.svg)',
+                            maskSize: 'contain',
+                            WebkitMaskSize: 'contain',
+                            maskRepeat: 'no-repeat',
+                            WebkitMaskRepeat: 'no-repeat',
+                            maskPosition: 'center',
+                            WebkitMaskPosition: 'center',
+                        }}
+                    />
+                    <span className="font-josefin uppercase leading-none tracking-widest">Studio Dark Horse</span>
+                </a>
+                <p className="text-custom-almond font-josefin uppercase text-center lg:text-left">
+                    © {currentYear} {t('copyright')}
+                </p>
+            </div>
         </footer>
     );
 };

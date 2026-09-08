@@ -60,8 +60,6 @@ const config: Config = {
                 josefin: ["Josefin", "sans-serif"],
                 kugile: ["Kugile", "sans-serif"],
                 mocha: ["Mocha", "sans-serif"],
-                moglan: ["Moglan", "sans-serif"],
-                primor: ["Primor", "sans-serif"],
             },
             animation: {
                 'bounce-right': 'bounce-right 1s infinite',
